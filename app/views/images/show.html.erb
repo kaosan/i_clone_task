@@ -1,0 +1,14 @@
+<h1>投稿詳細画面</h1>
+
+<p>画像: <%= image_tag @image.image.url %></p>
+<p>:コメント <%= @image.content %></p>
+<% unless @image.user_id == current_user.id %>
+        <% if @favorite.present? %>
+          <%= link_to 'お気に入りを削除する', favorite_path(id: @favorite.id), method: :delete, class:'tn outline btn-primary' %>
+        <% else %>
+          <%= link_to 'お気に入り', favorites_path(blog_id: @image.id), method: :post, class:'btn outline btn-info' %>
+        <% end %>
+      <% end %>
+      <br>
+
+      <%= link_to "ブログ一覧画面に戻る", images_path, class:'back_show' %>

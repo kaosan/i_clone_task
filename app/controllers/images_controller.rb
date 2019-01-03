@@ -8,11 +8,10 @@ before_action :logged_in?, only: [:new, :edit, :show, :destroy]
 
   def new
     if params[:back]
-      @blog = Blog.new(blog_params)
+      @image = Image.new(image_params)
     else
-      @blog = Blog.new
+      @image = Image.new
     end
-  end
   end
 
   def create
@@ -75,4 +74,6 @@ def logged_in?
     flash[:notice] = 'ログインしてください'
     redirect_to new_session_path
   end
+end
+
 end

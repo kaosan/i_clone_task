@@ -1,3 +1,165 @@
-// Place all the styles related to the images controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+html{
+  min-height: 100%;
+  position: relative;
+  background-color: #e7e7eb;
+}
+
+body{
+  margin-bottom: 60px;
+  padding-bottom: 0;
+  background-color: #e7e7eb;
+}
+
+.header{
+  background-color: #7a4171;
+  height: 50px;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.top_menu li{
+  float: left;
+  width: auto;
+}
+.top_menu li a{
+  color:#fff;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+}
+.top_menu li a:hover{
+  text-decoration: underline;
+}
+
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+.top_image{
+  width: 100%;
+}
+
+h1 {
+  color:#9d5b8b;
+}
+
+h3{
+  color: #9d5b8b;
+}
+
+.footer{
+  background-color:#7a4171;
+  height: 60px;
+  width: 100%;
+  bottom: 0;
+  display: table;
+  position: fixed;
+  margin-bottom: 0;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+#error_explanation{
+  color:red;
+}
+
+.btn-primary{
+  background-color: #895b8a
+}
+
+.btn-primary.outline{
+  border: 3px solid #895b8a;
+}
+
+.btn-primary:hover, .btn-primary:focus,
+.btn-primary:active, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary:active.focus,
+.btn-primary.active, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary,
+.open > .dropdown-toggle.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary:focus,
+.open > .dropdown-toggle.btn-primary.focus,
+.btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus {
+  background-color: #824880;
+}
+
+.btn-info{
+  background-color: #9d5b8b;
+}
+
+.btn-info.outline{
+  border: 3px solid #9d5b8b;
+}
+
+.btn-info:hover, .btn-info:focus,
+.btn-info:active, .btn-info:active:focus, .btn-info:active:hover, .btn-info:active.focus,
+.btn-info.active, .btn-info.active:focus, .btn-info.active:hover, .btn-info.active.focus,
+.open > .dropdown-toggle.btn-info,
+.open > .dropdown-toggle.btn-info:focus,
+.open > .dropdown-toggle.btn-info:focus,
+.open > .dropdown-toggle.btn-info.focus,
+.btn-info.disabled:hover, .btn-info[disabled]:hover, fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus, .btn-info[disabled]:focus, fieldset[disabled] .btn-info:focus,
+.btn-info.disabled.focus, .btn-info[disabled].focus, fieldset[disabled] .btn-info.focus {
+  background-color: #7a4171;
+}
+
+.btn-dander{
+  background-color: #cc7eb1;
+  color: #fff;
+}
+
+.btn-dander.outline{
+  border: 3px solid #cc7eb1;
+}
+
+.new_blog{
+  color: #9d5b8b;
+}
+
+.new_blog:hover{
+  color: #7a4171;
+}
+
+.botton{
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background: #cc7eb1;
+  color: #fff;
+  border-bottom: solid 4px #cc7eb1;
+  border-radius: 3px;
+}
+
+.botton:active{
+  -ms-transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  border-bottom: none;
+}
+
+.login{
+  color: #bc64a4;
+}
+
+.sin_up{
+  color: #bc64a4;
+}

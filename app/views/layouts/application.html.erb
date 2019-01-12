@@ -9,6 +9,52 @@
   </head>
 
   <body>
+    <header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <nav class="menu">
+          <ul class="top_menu clearfix">
+            <li>
+              <a><%= link_to "topへ", root_path %></a>
+            </li>
+
+            <% if logged_in? %>
+            <li>
+              <a><%= link_to "マイページ", user_path(current_user.id) %></a>
+              </li>
+              <li>
+                <a><%= link_to "投稿一覧", images_path %></a>
+              </li>
+              <li>
+                <a><%= link_to '投稿画面へ', new_image_path %></a>
+              </li>
+              <li>
+                <a><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></a>
+              </li>
+            <% else %>
+              <li>
+                <a><%= link_to "登録", new_user_path %></a>
+              </li>
+              <li>
+                <a><%= link_to "ログイン", new_session_path %></a>
+              </li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+</header>
+<% flash.each do |key, value| %>
+  <%= content_tag(:div, value, class: "#{key}") %>
+<% end %>
+
     <%= yield %>
+    <footer class="footer">
+  <p>task_blogapp</p>
+</footer>
+
   </body>
 </html>

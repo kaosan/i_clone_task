@@ -1,5 +1,5 @@
 class ImagesController < ApplicationController
-  before_action :set_image, only: [:show, :edit, :update, :destro]
+  before_action :set_image, only: [:show, :edit, :update, :destroy]
 before_action :logged_in?, only: [:new, :edit, :show, :destroy]
 
   def index
@@ -67,13 +67,13 @@ before_action :logged_in?, only: [:new, :edit, :show, :destroy]
 
   def set_image
   @image = Image.find(params[:id])
-end
-
-def logged_in?
-  unless current_user.present?
-    flash[:notice] = 'ログインしてください'
-    redirect_to new_session_path
   end
-end
+
+  def logged_in?
+    unless current_user.present?
+      flash[:notice] = 'ログインしてください'
+      redirect_to new_session_path
+    end
+  end
 
 end

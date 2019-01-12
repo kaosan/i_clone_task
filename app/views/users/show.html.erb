@@ -1,3 +1,4 @@
+<br><%= image_tag @user.image.url %>
 <h1><%= @user.name %>のページ</h1>
 <h3>お気に入りした投稿</h3>
 <table>
@@ -9,3 +10,5 @@
     </tr>
     <% end %>
     </table>
+<br>
+<%= link_to "戻る", edit_user_path %>

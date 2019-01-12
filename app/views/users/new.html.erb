@@ -29,5 +29,11 @@
   <%= f.label :同じパスワードを入力 %>
   <%= f.password_field :password_confirmation %>
 </div>
+<div class = "field">
+  <%= f.label :image %>
+  <%= image_tag(@user.image.url) if @user.image.url %>
+  <%= f.file_field :image %>
+  </div>
+  <br>
 <%= f.submit "Create my acount", class: 'botton' %>
 <% end %>

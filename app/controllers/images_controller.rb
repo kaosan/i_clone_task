@@ -17,15 +17,11 @@ before_action :logged_in?, only: [:new, :edit, :show, :destroy]
   def create
     @image = Image.new(image_params)
     @image.user_id = current_user.id
-
-    respond_to do |format|
-      if @image.save
-        format.html { redirect_to @image, notice: '投稿しました!' }
-        format.json { render :show, status: :created, location: @image }
-      else
-        format.html { render :new }
-        format.json { render json: @image.errors, status: :unprocessable_entity }
-      end
+    if @image.save
+      ContactMailer.contact_mail(@image).deliver
+      redirect_to images_path, notice: '投稿し、投稿確認メールを送信しました'
+    else
+      render 'new'
     end
   end
 

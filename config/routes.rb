@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts
   root to: 'images#top'
   resources :favorites, only:[:create, :destroy]
   resources :sessions, only: [:new, :create, :destroy]
@@ -8,4 +9,5 @@ Rails.application.routes.draw do
       post :confirm
     end
   end
+  mount LetterOpenerWeb::Engine, at: "/letter_opener"
 end

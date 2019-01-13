@@ -15,11 +15,12 @@
     <%= form.label :image %>
     <%= image_tag(@image.image.url) if @image.image.url %>
     <%= form.file_field :image %>
+    <%= form.hidden_field :image_cache %>
   </div>
   <div class="image_title">
     <%= form.label :content %>
     <%= form.text_field :content %>
   </div>
-  <%= form.submit %>
+  <%= form.submit "送信", class: 'botton' %>
 <% end %>
 <%= link_to "ブログ一覧画面にもどる", images_path %>

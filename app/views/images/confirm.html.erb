@@ -5,11 +5,12 @@
 <%= form.hidden_field :image_cache %>
   <%= form.hidden_field :content %>
 
-  <p>コメント:<%= @image.content %></p>
-  <%= form.submit  "登録する" %>
+  <p><%= @image.content %></p>
+  <%= form.submit  "登録する", class: 'botton' %>
 <% end %>
 
 <%= form_with(model:@image, url:new_image_path, local:true, method:"get") do |form| %>
   <%= form.hidden_field :image_cache %>
-  <%= form.submit "戻る", name: "back" %>
+  <%= form.hidden_field :content %>
+  <%= form.submit "戻る", name: "back", class: 'botton' %>
 <% end %>

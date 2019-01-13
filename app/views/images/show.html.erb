@@ -1,7 +1,7 @@
 <h1>投稿詳細画面</h1>
 
-<p>画像: <%= image_tag @image.image.url %></p>
-<p>:コメント <%= @image.content %></p>
+<p><%= image_tag @image.image.url %></p>
+<p><%= @image.content %></p>
 <% unless @image.user_id == current_user.id %>
         <% if @favorite.present? %>
           <%= link_to 'お気に入りを削除する', favorite_path(id: @favorite.id), method: :delete, class:'tn outline btn-primary' %>

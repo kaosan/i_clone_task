@@ -14,3 +14,20 @@ th{
 .user_edit{
   color: #bc64a4;
 }
+
+.botton{
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background: #cc7eb1;
+  color: #fff;
+  border-bottom: solid 4px #cc7eb1;
+  border-radius: 3px;
+}
+
+.botton:active{
+  -ms-transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  border-bottom: none;
+}

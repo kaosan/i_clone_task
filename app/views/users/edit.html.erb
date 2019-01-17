@@ -1,10 +1,2 @@
-<h1>プロフィールの編集</h1>
-<%= form_with(model: @user, local: true, url:choose_new_or_edit) do |form| %>
-<div class="filed">
-  <%= form.label :image %>
-  <%= image_tag(@user.image.url) if @user.image.url %>
-  <%= form.file_field :image %>
-</div>
-  <%= form.submit %>
-<% end %>
-<%= link_to "もどる", user_path %>
+<h3>プロフィールの編集</h3>
+<%= render 'form' %>

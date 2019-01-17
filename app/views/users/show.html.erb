@@ -1,5 +1,6 @@
 <br><%= image_tag @user.icon %>
 <h1><%= @user.name %>のページ</h1>
+<p><%= notice %></p>
 <h3>お気に入りした投稿</h3>
   <% @user.favorite_images.each do |image| %>
     <br>投稿者:<%= image.user.name %>
@@ -7,4 +8,4 @@
     <br>コメント:<%= image.content %>
     <% end %>
 <br>
-<%= link_to "戻る", edit_user_path %>
+<%= link_to "編集", edit_user_path %>

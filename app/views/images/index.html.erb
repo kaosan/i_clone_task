@@ -5,7 +5,7 @@
   <div class="row">
     <% @images.each do |image| %>
       <div class="col-xs-12 col-md-6">
-        <p><%= image_tag image.image, :size =>'480x480' %></p>
+        <p><%= image_tag image.image, :class =>'img-responsive center-block' %></p>
         <p><%= image.content %></p>
         <p> 投稿者:<%= image.user.name %></p>
         <span><%= link_to '詳細', image_path(image.id), class:'btn outline btn-primary' %></span>

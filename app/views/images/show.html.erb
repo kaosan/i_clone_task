@@ -1,6 +1,7 @@
+<div class="container">
 <h1>投稿詳細画面</h1>
 
-<p><%= image_tag @image.image.url %></p>
+<p><%= image_tag @image.image.url, :class =>'img-responsive center-block' %></p>
 <p><%= @image.content %></p>
 <% unless @image.user_id == current_user.id %>
         <% if @favorite.present? %>
@@ -12,3 +13,4 @@
       <br>
 
       <%= link_to "ブログ一覧画面に戻る", images_path, class:'back_show' %>
+</div>

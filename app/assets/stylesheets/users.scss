@@ -31,3 +31,13 @@ th{
   transform: translateY(4px);
   border-bottom: none;
 }
+
+.img-responsive{
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.container{
+  overflow: scroll;
+}

@@ -1,11 +1,14 @@
+<div class="container">
+
 <br><%= image_tag @user.icon %>
 <h1><%= @user.name %>のページ</h1>
 <p><%= notice %></p>
 <h3>お気に入りした投稿</h3>
   <% @user.favorite_images.each do |image| %>
     <br>投稿者:<%= image.user.name %>
-    <br><%= image_tag image.image %>
+    <br><%= image_tag image.image, :class =>'img-responsive center-block' %>
     <br>コメント:<%= image.content %>
     <% end %>
 <br>
 <%= link_to "編集", edit_user_path %>
+</div>
